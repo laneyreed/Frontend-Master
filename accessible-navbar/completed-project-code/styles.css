@@ -90,6 +90,11 @@ nav a.active-link{
 
 
 @media  screen and (max-width: 700px){
+    .top-content{
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+    }
+
     #open-menu-button, #close-menu-button{
         display: block; /*show buttons on small screens*/
     }
@@ -159,8 +164,30 @@ main p{
 }
 
 
-.about{
+.html, .css, .javascript, .python{
     margin-top: 20em;
     align-self: center; /*center the about section*/
     padding: min(5em, 7%); /*responsive padding, max of 5em or 7% of viewport width*/
+}
+
+
+
+.skip-to-content{
+    position: absolute; /*position the link off-screen*/
+    left: -9999px; /*move the link far to the left*/
+    top: auto;
+    width: 1px; /*make the link very small*/
+    height: 1px;
+    overflow: hidden; /*hide any overflow*/
+    z-index: -9999; /*make sure the link is behind other content*/
+}
+
+.skip-to-content:focus{ /*when the link is focused (tabbed to)*/
+    position: static; /*reset positioning when focused*/
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: visible; /*show overflow when focused*/
+    z-index: 9999; /*bring the link to the front when focused*/
 }

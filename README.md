@@ -19,6 +19,5 @@ Perfect for self-learners, bootcamp students, and anyone preparing for frontend 
 
 
 
-# Examples:
-**Fully completed projects with steps and comments** 
+# Small Projects
 - [Accessible Nav Bar](./accessible-navbar/README.md)
