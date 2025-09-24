@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('./css/skip-to-content.css');
+
+
 :root{
     --primary-color: #C2DA7C;
     --secondary-color: #19302B;
@@ -160,24 +163,4 @@ main p{
     margin-top: 20em;
     align-self: center; /*center the about section*/
     padding: min(5em, 7%); /*responsive padding, max of 5em or 7% of viewport width*/
-}
-
-.skip-to-content{
-    position: absolute; /*position the link off-screen*/
-    left: -9999px; /*move the link far to the left*/
-    top: auto;
-    width: 1px; /*make the link very small*/
-    height: 1px;
-    overflow: hidden; /*hide any overflow*/
-    z-index: -9999; /*make sure the link is behind other content*/
-}
-
-.skip-to-content:focus{ /*when the link is focused (tabbed to)*/
-    position: static; /*reset positioning when focused*/
-    left: auto;
-    top: auto;
-    width: auto;
-    height: auto;
-    overflow: visible; /*show overflow when focused*/
-    z-index: 9999; /*bring the link to the front when focused*/
 }

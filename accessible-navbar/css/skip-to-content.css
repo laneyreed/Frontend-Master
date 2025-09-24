@@ -1,0 +1,19 @@
+.skip-to-content{
+    position: absolute; /*position the link off-screen*/
+    left: -9999px; /*move the link far to the left*/
+    top: auto;
+    width: 1px; /*make the link very small*/
+    height: 1px;
+    overflow: hidden; /*hide any overflow*/
+    z-index: -9999; /*make sure the link is behind other content*/
+}
+
+.skip-to-content:focus{ /*when the link is focused (tabbed to)*/
+    position: static; /*reset positioning when focused*/
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: visible; /*show overflow when focused*/
+    z-index: 9999; /*bring the link to the front when focused*/
+}

@@ -9,13 +9,13 @@
     
 </head>
 <body>
-    <!-- skip to content link for screen readers and keyboard users -->
-     <!-- the skip to content link allows users to bypass repetitive navigation links and go directly to the main content of the page, improving accessibility and user experience -->
-    <!-- add this as the first element inside the body tag -->
-     <!-- use css to visually hide the link but make it visible when focused -->
-      <!-- only shows when focused(tabbed to) for keyboard users -->
-     <!-- href="#main-content" should match the id of the main content container -->
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <!-- TODO 1: Skip to content link for screen readers and keyboard users -->
+        <!-- add this as the first element inside the body tag -->
+        <!-- use css(skip-to-content.css) to visually hide the link but make it visible when focused -->
+        <!-- only shows when focused(tabbed to) for keyboard users -->
+        <!-- click tab then space to activate the link -->
+        <!-- href="#about" should match the id of the main content container -->
+    <a href="#about" class="skip-to-content">Skip to content</a>
 
 
     <header id="header" class="header">
@@ -90,42 +90,46 @@
     </header>
 
     <main id="main-content">
-        <h1>Home Page: Responsive Navigation Bar</h1>
-        <p>
+        <div>
+            <h1>Home Page: Responsive Navigation Bar</h1>
+            <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quia deserunt eos ab aperiam reprehenderit dolores 
             fugit, molestias corrupti quos iusto repudiandae quas assumenda doloremque nisi, eum incidunt ullam facere!
+            </p>
+        </div>
 
-        </p>
+        <section id="about" class="about">
+            <h2>About </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam dignissimos omnis porro in atque, 
+                et provident quidem consectetur tempore doloribus nihil. Voluptatibus temporibus, provident necessitatibus
+                ipsa fugit eligendi pariatur!
+            </p>
+            <p>
+                Voluptatibus temporibus, provident necessitatibus ipsa fugit eligendi pariatur:
+            </p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+            <p>
+                Ex quia deserunt eos ab aperiam reprehenderit dolores 
+                fugit, molestias corrupti quos iusto repudiandae quas assumenda doloremque nisi, eum incidunt ullam facere!
+            </p>
+        </section>
+        
     </main>
 
-    <section id="about" class="about">
-        <h2>About </h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam dignissimos omnis porro in atque, 
-            et provident quidem consectetur tempore doloribus nihil. Voluptatibus temporibus, provident necessitatibus
-             ipsa fugit eligendi pariatur!
-        </p>
-        <p>
-             Voluptatibus temporibus, provident necessitatibus ipsa fugit eligendi pariatur:
-        </p>
-        <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ul>
-        <p>
-            Ex quia deserunt eos ab aperiam reprehenderit dolores 
-            fugit, molestias corrupti quos iusto repudiandae quas assumenda doloremque nisi, eum incidunt ullam facere!
-        </p>
-    </section>
+
 
 </body>
 </html>
