@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primary-color: #C2DA7C;
+    --secondary-color: #19302B;
+    --text-color:  #FFFFFF;
+    --border-color: #121212;
+}
+
+*{
+    box-sizing: border-box;/* makes width and height include padding and border */
+    margin: 0;/*reset default margin and padding*/
+    padding: 0;
+}
+
+html{
+    font-family: Poppins, "Segoe UI" sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    min-height: 100dvh; /* For mobile browsers */
+    background-color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+}
+
+
+nav{
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav .home-li{
+    margin-right: auto; /*moves the home link to the far left*/
+}
+
+nav li{
+    display: flex; /*makes the li take up only as much space as its content*/
+}
+
+nav a{
+    display: flex;/*padding doesn't work well on inline elements*/
+    text-decoration: none;
+    color: var(--text-color);
+    padding: .5em 1em;/*padding will control the size of the clickable area and the space around the text*/
+    transition: background-color 600ms ease;/*animate the background color change on hover*/
+}
+
+
+nav a:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-top: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    margin-top: -2px; /*move the link up by 2px to compensate for the added border*/
+}
+
+nav a.active-link{
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: .5em; /*add some space between the border and the text*/
+}
+
+#open-menu-button, #close-menu-button{
+    display: none; /*hide buttons by default, will show on small screens*/
+    background: none; /*remove default button styles*/
+    border: none;
+    cursor: pointer; /*change cursor to pointer on hover*/
+    padding: .5em; /*add some padding for easier clicking*/
+}
+
+#open-menu-button{
+    margin-left: auto; /*push the button to the far right*/
+    margin-top:0 ;
+}
+
+#overlay{
+    position: fixed; /*make the overlay cover the entire screen*/
+    inset: 0; /*top, right, bottom, left all set to 0*/
+    background-color: rgba(0, 0, 0, 0.5); /*adds a semi-transparent black background to the page when the menu is open*/
+    z-index: 9; /*make sure the overlay is below the nav but above other content*/
+    display: none; /*hide the overlay by default*/
+}
+
+
+@media  screen and (max-width: 700px){
+    #open-menu-button, #close-menu-button{
+        display: block; /*show buttons on small screens*/
+    }
+
+    nav{
+      position: fixed; 
+      top: 0; /*fixed at the top of the screen*/
+      /* right: 0; */
+      right: -100%; /*hide the nav off-screen to the right*/
+      transition: right 300ms ease; /*animate the nav sliding in*/
+      height:100vh ;
+      width: min(15em, 100%); /*max width of 15em or 100% of viewport width*/
+      z-index: 10; /*make sure the nav is on top of other content*/ 
+      border-left: 1px solid var(--primary-color)
+    }
+
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a{
+        width: 100%; /*make links take up full width of nav*/
+        padding: 1em; /*increase padding for easier tapping*/
+    }
+
+    nav a.active-link{
+        border-bottom: none; /*remove bottom border for active link*/
+        
+    }
+
+    nav .home-li{
+        margin-right: unset; /*remove auto margin*/
+    }
+
+    nav.open{
+        right: 0; /*slide the nav into view*/
+    }
+
+    nav.open ~ #overlay{ /* sibling selector(~) selects the overlay when nav is open */
+        display: block; /*show the overlay when nav is open*/
+    }
+}
+
+
+
+main{
+    padding: min(5em, 7%);/* responsive padding, max of 5em or 7% of viewport width */
+}
+
+main p{
+    margin-top: .35em;
+}
+
+.logo h1{
+    padding: 1rem; /*responsive padding, max of 1em or 3% of viewport width*/
+}
+
+.top-content{
+    display: flex;
+    gap: 1em; /*space between items*/
+}
+
+.top-content p{
+    margin-top: 0; /*remove top margin from paragraph*/
+    align-self: center; /*vertically center the paragraph*/
+}
+
+
+.about{
+    margin-top: 20em;
+    align-self: center; /*center the about section*/
+    padding: min(5em, 7%); /*responsive padding, max of 5em or 7% of viewport width*/
+}
+
+.skip-to-content{
+    position: absolute; /*position the link off-screen*/
+    left: -9999px; /*move the link far to the left*/
+    top: auto;
+    width: 1px; /*make the link very small*/
+    height: 1px;
+    overflow: hidden; /*hide any overflow*/
+    z-index: -9999; /*make sure the link is behind other content*/
+}
+
+.skip-to-content:focus{ /*when the link is focused (tabbed to)*/
+    position: static; /*reset positioning when focused*/
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: visible; /*show overflow when focused*/
+    z-index: 9999; /*bring the link to the front when focused*/
+}
