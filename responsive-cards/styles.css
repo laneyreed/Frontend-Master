@@ -1,0 +1,50 @@
+/* Container styles */
+.container {
+  background-color: #f8f9fa;
+  padding: 0;
+}
+
+/* Cards Section */
+.cards-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: rgb(62,180,137);
+  background: linear-gradient(159deg, rgba(62,180,137,1) 0%, rgba(144,238,144,1) 100%);
+  border-radius: 2px;
+}
+
+
+/* Cards Grid */
+.cards-grid {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
