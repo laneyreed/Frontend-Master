@@ -20,17 +20,17 @@ const openMenuButton = document.getElementById('open-menu-button');
     // When the menu is opened using JavaScript, the inert attribute should be removed to make the menu interactive again.
     //assign the inert attribute to the nav menu only for mobile view when the menu is closed
 
-//javascript media query to check if the viewport width is less than or equal to 700px (mobile view)
-//if the viewport width is less than or equal to 700px, add the inert attribute to the nav menu
-//if the viewport width is greater than 700px, remove the inert attribute from the nav menu
-const mediaQuery = window.matchMedia('(width < 700px)');
+//javascript media query to check if the viewport width is less than or equal to 600px (mobile view)
+//if the viewport width is less than or equal to 600px, add the inert attribute to the nav menu
+//if the viewport width is greater than 600px, remove the inert attribute from the nav menu
+const mediaQuery = window.matchMedia('(width < 600px)');
 
 
 
 //when the user resizes the viewport, the media query will be re-evaluated and the handleViewportChange function will be called
 // Add a listener to the media query to handle changes in viewport width
 mediaQuery.addEventListener('change', (e) => handleViewportChange(e));//without this line the inert attribute will not be added or removed when the user resizes the viewport
-// Note: The 'change' event is fired when the evaluation of the media query changes, i.e., when the viewport crosses the defined threshold (700px in this case).
+// Note: The 'change' event is fired when the evaluation of the media query changes, i.e., when the viewport crosses the defined threshold (600px in this case).
 
 
 // You can add the event listener in two ways:
@@ -42,17 +42,17 @@ mediaQuery.addEventListener('change', (e) => handleViewportChange(e));//without 
 
 // Function to handle viewport changes
 function handleViewportChange(e) {
-//On screens above 700px returns MediaQueryList {media: '(width: 700px)', matches: false, onchange: null}
-//On screens 700px and below returns MediaQueryList {media: '(width: 700px)', matches: true, onchange: null}
+//On screens above 600px returns MediaQueryList {media: '(width: 600px)', matches: false, onchange: null}
+//On screens 600px and below returns MediaQueryList {media: '(width: 600px)', matches: true, onchange: null}
 //the property 'matches' is a boolean that indicates whether the document currently matches the media query list or not
  console.log(e);
  
  //TODO: Add inert attribute to nav menu when closed for mobile view only
     if (e.matches) {
-        // if e.matches == true, the viewport width is less than or equal to 700px
+        // if e.matches == true, the viewport width is less than or equal to 600px
         navMenu.setAttribute('inert', 'true');
     } else {
-        // if e.matches == false, the viewport width is greater than 700px
+        // if e.matches == false, the viewport width is greater than 600px
         navMenu.removeAttribute('inert');
     }
 }
