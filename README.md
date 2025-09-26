@@ -21,3 +21,4 @@ Perfect for self-learners, bootcamp students, and anyone preparing for frontend 
 
 # Small Projects
 - [Accessible Nav Bar](./accessible-navbar/README.md)
+- [Professional Responsive Cards with Hover animation](./responsive-cards/README.md)
