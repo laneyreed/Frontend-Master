@@ -2,6 +2,7 @@
 **Demonstrates a comprehensive accessible and responsive navigation bar, implemented using HTML, CSS, and JavaScript.**
 
 📋 Project Overview
+
 **The navigation bar is designed to be fully accessible for users with disabilities, responsive across different screen sizes, and includes modern web development best practices.**
 
 ### 🏗️ HTML Features
