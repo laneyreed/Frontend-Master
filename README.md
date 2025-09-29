@@ -27,6 +27,6 @@
 
 
 ## 🌟 Show Your Support
-If you found these CSS projects helpful, please ⭐ star this repository!
+If you found these projects helpful, please ⭐ star this repository!
 
 **Happy Coding!** 🚀
